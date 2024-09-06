@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../common/Button";
+import Image from "next/image";
+import xLogo from "@/assets/xLogo.svg";
 
 const TONCO = () => (
     <svg width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,12 +35,7 @@ const Header: React.FC = () => {
             <nav className="flex gap-5 items-center">
                 <Button variant="secondary">
                     More Info
-                    <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/79d4d7e2b33f59c7a544eb189bdca49ffbe0f67ffbcd682de8e0ee28bf2a6859?placeholderIfAbsent=true&apiKey=178a4f741eef4ff885dc743f1ec89e39"
-                        alt=""
-                        className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
-                    />
+                    <Image alt="x" src={xLogo} quality={100} />
                 </Button>
                 <Button variant="primary">Launch_App</Button>
             </nav>

@@ -34,7 +34,12 @@
     src: url("/fonts/NeoGram-ExtraBoldExt.woff") format("woff");
 }
 
+@font-face {
+    font-family: "NeoGram Regular Ext";
+    src: url("/fonts/NeoGram-RegularExt.woff") format("woff");
+}
+
 body {
     font-family: "NeoGram Regular", "NeoGram Medium", "NeoGram Bold", "NeoGram ExtraBold", "NeoGram Heavy", "NeoGram Black Ext",
-        "NeoGram ExtraBold Ext", sans-serif;
+        "NeoGram ExtraBold Ext", "NeoGram Regular Ext", sans-serif;
 }

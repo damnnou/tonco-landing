@@ -7,13 +7,13 @@ import Button from "@/components/common/Button";
 
 export default function HeroSection() {
     return (
-        <section className="flex flex-col items-center justify-between w-full mb-12">
-            <div className="w-full h-[900px] absolute -z-10 top-0 left-0 overflow-hidden">
+        <section className="flex flex-col items-center justify-between w-full mb-12 tall:h-screen h-[900px]">
+            <div className="w-full tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden">
                 <Image className="object-cover w-full h-full" quality={100} alt="background-image" src={bg} />
             </div>
             <Image className="absolute -z-10 left-0 top-0" quality={100} alt="left-ton-coins" src={leftTonCoins} />
             <Image className="absolute -z-10 right-0 top-0" quality={100} alt="right-ton-coins" src={rightTonCoins} />
-            <div className="flex flex-col items-center gap-8 mt-80 justify-between relative">
+            <div className="flex flex-col h-72 items-center gap-8 tall:my-auto mt-80 justify-between relative">
                 <Image className="absolute -top-[350px] animate-gravity tall:scale-100" quality={100} alt="pea" src={pea} />
                 <h1 className="text-[80px] text-center max-md:max-w-full max-md:text-4xl max-md:leading-10 font-extended leading-[80px]">
                     The First <br /> Concentrated <br /> Liquidity DEX on TON
