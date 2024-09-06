@@ -1,0 +1,40 @@
+/* public/fonts.css */
+@font-face {
+    font-family: "NeoGram Regular";
+    src: url("/fonts/NeoGram-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram Medium";
+    src: url("/fonts/NeoGram-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram Bold";
+    src: url("/fonts/NeoGram-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram ExtraBold";
+    src: url("/fonts/NeoGram-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram Heavy";
+    src: url("/fonts/NeoGram-Heavy.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram Black Ext";
+    src: url("/fonts/NeoGram-BlackExt.woff") format("woff");
+}
+
+@font-face {
+    font-family: "NeoGram ExtraBold Ext";
+    src: url("/fonts/NeoGram-ExtraBoldExt.woff") format("woff");
+}
+
+body {
+    font-family: "NeoGram Regular", "NeoGram Medium", "NeoGram Bold", "NeoGram ExtraBold", "NeoGram Heavy", "NeoGram Black Ext",
+        "NeoGram ExtraBold Ext", sans-serif;
+}
