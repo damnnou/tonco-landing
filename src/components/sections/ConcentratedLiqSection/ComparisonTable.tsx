@@ -5,7 +5,7 @@ export default function ComparisonTable() {
         <div className="flex flex-col w-full ">
             <div className="flex flex-col mt-8 w-full text-black max-md:max-w-full">
                 <div className="flex flex-wrap gap-10 justify-center items-center px-6 pb-2 w-full rounded-xl max-md:px-5 max-md:max-w-full">
-                    <div className="flex-1 shrink self-stretch my-auto text-xl tracking-wider leading-9 basis-0">table head</div>
+                    <div className="flex-1 shrink self-stretch my-auto text-xl tracking-wider leading-9 basis-0"></div>
                     <div className="flex flex-col flex-1 shrink justify-center self-stretch my-auto basis-0 min-w-[240px]">
                         <div className="text-2xl font-extraboldExt">V3 AMM</div>
                         <div className="text-lg font-regularExt">Concentrated Liquidity</div>

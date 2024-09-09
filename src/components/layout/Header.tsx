@@ -30,7 +30,10 @@ const TONCO = () => (
 
 const Header: React.FC = () => {
     return (
-        <header className="flex justify-between items-center w-full h-fit sticky p-10 pb-0">
+        <header
+            className="flex justify-between items-center w-full h-fit sticky p-10 pb-0 animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500"
+            style={{ animationDelay: "1.2s" }}
+        >
             <TONCO />
             <nav className="flex gap-5 items-center">
                 <Button variant="secondary">

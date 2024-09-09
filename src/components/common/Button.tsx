@@ -1,13 +1,13 @@
 import React from "react";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     variant: "primary" | "secondary" | "action";
     className?: string;
     onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, variant, onClick, className }) => {
+const Button: React.FC<ButtonProps> = ({ children, variant, onClick, className, ...props }) => {
     const baseClasses =
         "flex gap-2 justify-center items-center self-stretch px-8 py-3 my-auto rounded-xl min-h-[56px] max-md:px-5 font-extraboldExt";
     const variantClasses =
@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant, onClick, className }
             : "text-white border border-white border-solid";
 
     return (
-        <button className={`${baseClasses} ${variantClasses} ${className}`} onClick={onClick}>
+        <button {...props} className={`${baseClasses} ${variantClasses} ${className}`} onClick={onClick}>
             {children}
         </button>
     );

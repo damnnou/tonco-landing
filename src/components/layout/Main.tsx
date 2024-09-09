@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import AvantGardeSection from "../sections/AvantGardeSection";
 import ConcentratedLiqSection from "../sections/ConcentratedLiqSection";
 import DynamicFeesSection from "../sections/DynamicFeesSection";
@@ -7,6 +8,32 @@ import RoadmapSection from "../sections/RoadmapSection";
 import Tap2EarnSection from "../sections/Tap2EarnSection";
 
 const Main = () => {
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0 && !hasScrolled) {
+                setHasScrolled(true);
+                // setTimeout(() => {
+                window.scrollTo({
+                    top: window.innerHeight + 100,
+                    behavior: "smooth",
+                });
+                // }, 100);
+            }
+        };
+
+        window.addEventListener("wheel", handleScroll);
+
+        return () => {
+            window.removeEventListener("wheel", handleScroll);
+        };
+    }, [hasScrolled]);
+
     return (
         <main className="flex flex-col gap-8 px-8 max-md:px-5 items-center">
             <HeroSection />
