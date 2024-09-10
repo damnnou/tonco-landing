@@ -4,7 +4,7 @@ import Image from "next/image";
 import xLogo from "@/assets/xLogo.svg";
 
 const TONCO = () => (
-    <svg width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="max-md:w-[115px]" width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M3.86086 0.472579H26.7959C27.6759 0.472579 28.3221 0.582579 28.7346 0.802579C29.1471 0.995079 29.4221 1.31133 29.5596 1.75133C29.6971 2.19133 29.7659 2.76883 29.7659 3.48383C29.7659 4.19883 29.6971 4.77633 29.5596 5.21633C29.4221 5.62883 29.1884 5.91758 28.8584 6.08258C28.3634 6.33008 27.6621 6.45383 26.7546 6.45383H18.8759V27.2026C18.8759 27.8351 18.8484 28.3026 18.7934 28.6051C18.7659 28.9076 18.6421 29.2651 18.4221 29.6776C18.2296 30.0626 17.8721 30.3376 17.3496 30.5026C16.8271 30.6676 16.1396 30.7501 15.2871 30.7501C14.4346 30.7501 13.7471 30.6676 13.2246 30.5026C12.7296 30.3376 12.3721 30.0626 12.1521 29.6776C11.9596 29.2651 11.8359 28.9076 11.7809 28.6051C11.7534 28.2751 11.7396 27.7938 11.7396 27.1613V6.45383H3.81961C2.93961 6.45383 2.29336 6.35758 1.88086 6.16508C1.46836 5.94508 1.19336 5.61508 1.05586 5.17508C0.918359 4.73508 0.849609 4.15758 0.849609 3.44258C0.849609 2.72758 0.918359 2.16383 1.05586 1.75133C1.19336 1.31133 1.42711 1.00883 1.75711 0.843829C2.25211 0.596329 2.95336 0.472579 3.86086 0.472579Z"
             fill="white"
@@ -31,12 +31,12 @@ const TONCO = () => (
 const Header: React.FC = () => {
     return (
         <header
-            className="flex justify-between items-center w-full h-fit sticky p-10 pb-0 animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500"
+            className="flex z-20 justify-between max-md:justify-center items-center w-full h-fit sticky p-[33px] pb-0 animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500"
             style={{ animationDelay: "1.2s" }}
         >
             <TONCO />
-            <nav className="flex gap-5 items-center">
-                <Button variant="secondary">
+            <nav className="flex gap-5 items-center max-md:hidden">
+                <Button onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
                     More Info
                     <Image alt="x" src={xLogo} quality={100} />
                 </Button>

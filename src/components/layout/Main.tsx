@@ -8,34 +8,34 @@ import RoadmapSection from "../sections/RoadmapSection";
 import Tap2EarnSection from "../sections/Tap2EarnSection";
 
 const Main = () => {
-    const [hasScrolled, setHasScrolled] = useState(false);
+    // const [hasScrolled, setHasScrolled] = useState(false);
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo({ top: 0, behavior: "smooth" });
+    // }, []);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0 && !hasScrolled) {
-                setHasScrolled(true);
-                // setTimeout(() => {
-                window.scrollTo({
-                    top: window.innerHeight + 100,
-                    behavior: "smooth",
-                });
-                // }, 100);
-            }
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         if (window.scrollY > 0 && !hasScrolled) {
+    //             setHasScrolled(true);
+    //             // setTimeout(() => {
+    //             window.scrollTo({
+    //                 top: window.innerHeight < 820 ? 0 : window.innerHeight + 100,
+    //                 behavior: "smooth",
+    //             });
+    //             // }, 100);
+    //         }
+    //     };
 
-        window.addEventListener("wheel", handleScroll);
+    //     window.addEventListener("wheel", handleScroll);
 
-        return () => {
-            window.removeEventListener("wheel", handleScroll);
-        };
-    }, [hasScrolled]);
+    //     return () => {
+    //         window.removeEventListener("wheel", handleScroll);
+    //     };
+    // }, [hasScrolled]);
 
     return (
-        <main className="flex flex-col gap-8 px-8 max-md:px-5 items-center">
+        <main className="flex flex-col gap-8 px-8 max-md:px-0 items-center w-full">
             <HeroSection />
             <AvantGardeSection />
             <ConcentratedLiqSection />

@@ -49,7 +49,7 @@ const AvantGardeSection: React.FC = () => {
                 y: 40, // Настройте значение для фиксированного эффекта
                 scrollTrigger: {
                     trigger: "#avant-garde-section",
-                    start: "top 100px", // Начало фиксации
+                    start: window.innerWidth < 820 || window.innerHeight < 900 ? "top 30px" : "top 100px", // Начало фиксации
                     end: "+=400", // Продолжительность фиксации
                     scrub: true,
                     pin: true, // Фиксирует секцию на месте
@@ -60,7 +60,7 @@ const AvantGardeSection: React.FC = () => {
     }, []);
 
     return (
-        <section id="avant-garde-section" className="flex flex-col justify-center w-full">
+        <section id="avant-garde-section" className="flex flex-col justify-center w-full max-md:px-5">
             <h1 id="avant-garde-title" className="text-7xl text-pink-600 font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
                 The avant-garde tech for enhanced trading & LP experience
             </h1>

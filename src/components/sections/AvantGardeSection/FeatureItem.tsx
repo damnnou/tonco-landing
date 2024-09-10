@@ -12,8 +12,10 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ title }) => (
         id="feature-item"
         className="flex flex-wrap gap-2.5 items-center py-3 pr-3 pl-6 w-full rounded-3xl bg-[#EFF7F5] max-md:pl-5 max-md:max-w-full animate-text-fly-in"
     >
-        <span className="self-stretch my-auto text-2xl tracking-wider leading-none">—</span>
-        <h3 className="flex-1 shrink self-stretch my-auto text-4xl font-extraboldExt basis-0 leading-[80px] max-md:max-w-full">{title}</h3>
+        <span className="self-stretch my-auto text-2xl max-md:text-[20px] tracking-wider leading-none">—</span>
+        <h3 className="flex-1 shrink self-stretch my-auto text-4xl max-md:text-[16px] font-extraboldExt basis-0 leading-[80px] max-md:max-w-full">
+            {title}
+        </h3>
     </li>
 );
 

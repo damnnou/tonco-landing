@@ -7,6 +7,7 @@ import ComparisonTable from "./ComparisonTable";
 import { useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import ComparisonTableMobile from "./ComparisonTableMobile";
 
 export default function ConcentratedLiqSection() {
     useEffect(() => {
@@ -89,17 +90,28 @@ export default function ConcentratedLiqSection() {
     }, []);
 
     return (
-        <section id="concentrated-liquidity-section" className="bg-[#ECEFF3] w-full flex flex-col p-16 gap-16 rounded-xl">
-            <div className="flex flex-wrap gap-10 items-center w-full max-md:max-w-full">
+        <section
+            id="concentrated-liquidity-section"
+            className="bg-[#ECEFF3] w-full flex flex-col p-16 max-md:p-4 gap-16 max-md:gap-4 rounded-xl"
+        >
+            <div className="flex flex-wrap max-md:flex-col gap-10 items-center w-full max-md:max-w-full">
                 <h1 className="self-stretch my-auto text-7xl text-green-700 font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
                     Concentrated <br /> Liquidity
                 </h1>
-                <p className="flex-1 text-[26px] shrink self-stretch my-auto tracking-wider leading-9 text-black basis-0 max-md:max-w-full">
+                <p className="flex-1 text-[26px] max-md:text-[20px] shrink self-stretch my-auto tracking-wider leading-9 text-black basis-0 max-md:max-w-full">
                     Efficient use of capital – boosts capital efficiency up to 95% compared to traditional V2 DEXs.
                 </p>
             </div>
-            <Image id="pea-blackhole" className="rounded-xl w-full" quality={100} alt="peaBlackHole" src={peaBlackHole} />
-            <div className="flex gap-8">
+            <div id="pea-blackhole" className="rounded-xl w-full max-md:h-[360px] overflow-hidden">
+                <Image
+                    className="object-cover h-full w-full max-md:scale-[180%] max-md:translate-y-28 max-md:-translate-x-6"
+                    quality={100}
+                    alt="peaBlackHole"
+                    src={peaBlackHole}
+                />
+            </div>
+
+            <div className="flex gap-8 max-md:flex-col">
                 <BenefitsCard
                     title="Benefits for traders"
                     desc="For traders, concentrated liquidity allows them to trade with lower
@@ -121,15 +133,21 @@ export default function ConcentratedLiqSection() {
             <div className="flex flex-col w-full text-green-700 max-md:max-w-full">
                 <div
                     id="comparison-title"
-                    className="text-6xl uppercase font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10 min-w-full"
+                    className="text-6xl uppercase font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10 min-w-full max-md:mt-8"
                 >
                     up to 95% capital <br /> efficiency compared to <br /> traditional AMMs on TON
                 </div>
-                <div className="mt-8 text-2xl tracking-wider leading-none max-md:max-w-full">
-                    Concentrated Liquidity <span className="text-black">vs</span> Classic DEXs
+                <div className="mt-8 text-2xl max-md:font-extended max-md:text-black tracking-wider leading-none max-md:max-w-full">
+                    <span>Concentrated Liquidity </span>
+                    <span className="md:hidden">(V3 AMM) </span>
+                    <span className="text-black max-md:text-green-700">vs</span>
+                    <br className="md:hidden" />
+                    <span>Classic DEXs </span>
+                    <span className="md:hidden">(V2 AMM)</span>
                 </div>
             </div>
             <ComparisonTable />
+            <ComparisonTableMobile />
         </section>
     );
 }

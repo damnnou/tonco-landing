@@ -9,12 +9,12 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: React.FC<ButtonProps> = ({ children, variant, onClick, className, ...props }) => {
     const baseClasses =
-        "flex gap-2 justify-center items-center self-stretch px-8 py-3 my-auto rounded-xl min-h-[56px] max-md:px-5 font-extraboldExt";
+        "flex gap-2 justify-center items-center self-stretch px-8 py-3 my-auto rounded-xl min-h-[56px] max-md:min-h-[58px] max-md:text-[16px] max-md:px-5 font-extraboldExt hover:-translate-y-1 transition-all duration-200";
     const variantClasses =
         variant === "primary"
             ? "text-cyan-700 bg-white"
             : variant === "action"
-            ? "text-white bg-[#75BADB] text-xl"
+            ? "text-white bg-[#75BADB] text-xl min-h-[74px] text-[24px] max-md:min-h-[58px] max-md:text-[16px]"
             : "text-white border border-white border-solid";
 
     return (

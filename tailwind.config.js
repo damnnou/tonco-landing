@@ -6,10 +6,13 @@ module.exports = {
             screens: {
                 tall: { raw: "(min-height: 900px)" },
                 // => @media (min-height: 800px) { ... }
+                md: { raw: "(min-width: 820px)" },
+                "max-md": { raw: "(max-width: 820px)" },
             },
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                "green-700": "#249729",
             },
             fontFamily: {
                 extended: ['"NeoGram Black Ext"'],

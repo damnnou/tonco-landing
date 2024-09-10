@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function ComparisonTable() {
     return (
-        <div className="flex flex-col w-full ">
+        <div className="flex flex-col w-full max-md:hidden">
             <div className="flex flex-col mt-8 w-full text-black max-md:max-w-full">
                 <div className="flex flex-wrap gap-10 justify-center items-center px-6 pb-2 w-full rounded-xl max-md:px-5 max-md:max-w-full">
                     <div className="flex-1 shrink self-stretch my-auto text-xl tracking-wider leading-9 basis-0"></div>
