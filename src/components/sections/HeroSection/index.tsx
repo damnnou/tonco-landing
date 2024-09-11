@@ -50,7 +50,7 @@ export default function HeroSection() {
 
                 <div className="flex gap-4 animate-fade" style={{ animationDelay: "1.2s" }}>
                     <Button className="mx-auto " variant="action">
-                        Launch_App
+                        App Soon
                     </Button>
                     <Button
                         className="text-white px-8 font-extraboldExt md:hidden"

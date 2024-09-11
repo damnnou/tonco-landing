@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                     <Image alt="x" src={xLogo} quality={100} />
                 </Button>
 
-                <Button variant="primary">Launch_App</Button>
+                <Button variant="primary">App Soon</Button>
             </nav>
         </header>
     );
