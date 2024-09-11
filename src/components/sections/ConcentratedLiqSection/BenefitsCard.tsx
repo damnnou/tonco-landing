@@ -1,9 +1,7 @@
-import Image, { StaticImageData } from "next/image";
-
 interface BenefitsCardProps {
     title: string;
     desc: string;
-    img: StaticImageData;
+    img: string;
     color: "green" | "white";
 }
 
@@ -20,7 +18,7 @@ export default function BenefitsCard({ title, desc, img, color }: BenefitsCardPr
                 <div className="self-center text-4xl font-extended text-center max-md:max-w-full">{title}</div>
                 <div className="text-2xl leading-9 max-md:max-w-full">{desc}</div>
             </div>
-            <Image className="w-full hover:scale-[102%] transition-all duration-300" alt={title} src={img} quality={100} />
+            <img className="w-full hover:scale-[102%] transition-all duration-300" alt={title} src={img} />
         </div>
     );
 }

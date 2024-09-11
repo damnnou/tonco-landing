@@ -1,5 +1,4 @@
 import peaBlackHole from "@/assets/pea-blackhole.png";
-import Image from "next/image";
 import greenConcLiq from "@/assets/green-concLiq.png";
 import purpleConcLiq from "@/assets/purple-concLiq.png";
 import BenefitsCard from "./BenefitsCard";
@@ -103,11 +102,10 @@ export default function ConcentratedLiqSection() {
                 </p>
             </div>
             <div id="pea-blackhole" className="rounded-xl w-full max-md:h-[360px] overflow-hidden">
-                <Image
+                <img
                     className="object-cover h-full w-full max-md:scale-[180%] max-md:translate-y-28 max-md:-translate-x-6"
-                    quality={100}
                     alt="peaBlackHole"
-                    src={peaBlackHole}
+                    src={peaBlackHole.src}
                 />
             </div>
 
@@ -117,7 +115,7 @@ export default function ConcentratedLiqSection() {
                     desc="For traders, concentrated liquidity allows them to trade with lower
           slippage, as liquidity is more densely packed around specific price
           ranges, providing better trade execution."
-                    img={greenConcLiq}
+                    img={greenConcLiq.src}
                     color="green"
                 />
                 <BenefitsCard
@@ -126,7 +124,7 @@ export default function ConcentratedLiqSection() {
           ranges where they expect the most trading activity. This strategy
           increases capital efficiency, allowing LPs to earn higher fees with
           less capital, as their liquidity is more effectively utilized."
-                    img={purpleConcLiq}
+                    img={purpleConcLiq.src}
                     color="white"
                 />
             </div>

@@ -6,7 +6,6 @@ export const useImagesLoaded = () => {
     useEffect(() => {
         const images = Array.from(document.images);
         const totalImages = images.length;
-        console.log(totalImages);
         let loadedImagesCount = 0;
 
         const onImageLoad = () => {
