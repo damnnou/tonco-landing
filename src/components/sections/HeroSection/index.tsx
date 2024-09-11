@@ -10,7 +10,7 @@ import { BookLogo } from "@/components/layout/Header";
 export default function HeroSection() {
     return (
         <section className="flex flex-col items-center justify-between w-full tall:h-screen h-[900px] max-md:pb-8 max-md:h-screen text-white">
-            <div className="w-full tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden max-md:h-screen max-md:max-h-screen">
+            <div className="w-screen tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden max-md:h-screen max-md:max-h-screen">
                 <img className="object-cover w-full h-full" alt="background-image" src={bg.src} />
             </div>
             <Parallax className="absolute -z-10 left-0 top-0 animate-left-in max-md:w-[145px] max-md:-top-12" speed={-20}>

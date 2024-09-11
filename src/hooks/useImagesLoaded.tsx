@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
-export const useImagesLoaded = () => {
+const ImagesLoadedContext = createContext(false);
+
+const useImagesLoaded = () => {
     const [imagesLoaded, setImagesLoaded] = useState(false);
 
     useEffect(() => {
@@ -23,11 +25,21 @@ export const useImagesLoaded = () => {
                     onImageLoad();
                 } else {
                     img.addEventListener("load", onImageLoad);
-                    img.addEventListener("error", onImageLoad); // чтобы учесть возможные ошибки
+                    img.addEventListener("error", onImageLoad); // Учитываем ошибки
                 }
             });
         }
     }, []);
 
     return imagesLoaded;
+};
+
+export const ImagesLoadedProvider = ({ children }: { children: React.ReactNode }) => {
+    const imagesLoaded = useImagesLoaded();
+
+    return <ImagesLoadedContext.Provider value={imagesLoaded}>{children}</ImagesLoadedContext.Provider>;
+};
+
+export const useImagesLoadedContext = () => {
+    return useContext(ImagesLoadedContext);
 };
