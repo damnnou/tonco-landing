@@ -13,12 +13,16 @@ export default function HeroSection() {
             <div className="w-screen tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden max-md:h-screen max-md:max-h-screen">
                 <img className="object-cover w-full h-full" alt="background-image" src={bg.src} />
             </div>
-            <Parallax className="absolute -z-10 left-0 top-0 animate-left-in max-md:w-[145px] max-md:-top-12" speed={-20}>
-                <img alt="left-ton-coins" src={leftTonCoins.src} />
+            <Parallax
+                className="absolute -z-10 left-0 top-0 max-md:w-[145px] max-md:top-[10%] overflow-hidden"
+                translateY={[-20, 20]}
+                speed={0}
+            >
+                <img className="animate-left-in" alt="left-ton-coins" src={leftTonCoins.src} />
             </Parallax>
 
-            <Parallax className="absolute -z-10 right-0 top-0 animate-right-in max-md:w-[192px]" speed={0}>
-                <img alt="right-ton-coins" src={rightTonCoins.src} />
+            <Parallax className="absolute -z-10 right-0 top-0 max-md:w-[192px] overflow-hidden" speed={0}>
+                <img className="animate-right-in" alt="right-ton-coins" src={rightTonCoins.src} />
             </Parallax>
 
             <div className="flex flex-col h-72 items-center gap-8 max-md:gap-6 tall:my-auto max-md:my-auto mt-72 justify-between relative">

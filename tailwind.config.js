@@ -64,24 +64,18 @@ module.exports = {
                 },
                 "left-in": {
                     "0%": {
-                        // opacity: 0,
-
-                        left: "-25%",
+                        transform: "translateX(-100%)",
                     },
                     "100%": {
-                        opacity: 1,
-
-                        left: 0,
+                        transform: "translateX(0)",
                     },
                 },
                 "right-in": {
                     "0%": {
-                        // opacity: 0,
-                        right: "-25%",
+                        transform: "translateX(100%)",
                     },
                     "100%": {
-                        opacity: 1,
-                        right: 0,
+                        transform: "translateX(0)",
                     },
                 },
             },

@@ -66,7 +66,7 @@ const AvantGardeSection: React.FC = () => {
             </h1>
             <ul id="features-list" className="flex flex-col gap-2 mt-16 w-full text-black max-md:mt-10 max-md:max-w-full min-h-[320px]">
                 {features.map((feature, index) => (
-                    <FeatureItem title={feature} />
+                    <FeatureItem key={index} title={feature} />
                 ))}
             </ul>
         </section>
