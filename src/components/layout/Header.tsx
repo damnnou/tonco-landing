@@ -3,6 +3,25 @@ import Button from "../common/Button";
 import Image from "next/image";
 import xLogo from "@/assets/xLogo.svg";
 
+export const BookLogo = () => (
+    <svg
+        // style={{ transform: "scale(-1,1)" }}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20" />
+        <path d="M8 11h8" />
+        <path d="M8 7h6" />
+    </svg>
+);
+
 const TONCO = () => (
     <svg className="max-md:w-[115px]" width="149" height="32" viewBox="0 0 149 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -31,15 +50,24 @@ const TONCO = () => (
 const Header: React.FC = () => {
     return (
         <header
-            className="flex z-20 justify-between max-md:justify-center items-center w-full h-fit sticky p-[33px] pb-0 animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500"
+            className="flex z-20 justify-between max-md:justify-center items-center w-full h-fit p-[33px] pb-0 animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500"
             style={{ animationDelay: "1.2s" }}
         >
             <TONCO />
             <nav className="flex gap-5 items-center max-md:hidden">
+                <Button
+                    onClick={() => window.open("https://docs.tonco.io", "_blank")}
+                    variant="secondary"
+                    className="text-white px-8 font-extraboldExt"
+                >
+                    <BookLogo />
+                    Docs
+                </Button>
                 <Button onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
                     More Info
                     <Image alt="x" src={xLogo} quality={100} />
                 </Button>
+
                 <Button variant="primary">Launch_App</Button>
             </nav>
         </header>

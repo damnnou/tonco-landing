@@ -6,6 +6,7 @@ import pea from "@/assets/pea.png";
 import Button from "@/components/common/Button";
 import { Parallax } from "react-scroll-parallax";
 import xLogo from "@/assets/xLogo.svg";
+import { BookLogo } from "@/components/layout/Header";
 
 export default function HeroSection() {
     return (
@@ -51,9 +52,19 @@ export default function HeroSection() {
                     <Button className="mx-auto " variant="action">
                         Launch_App
                     </Button>
-                    <Button className="md:hidden" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
-                        More Info
+                    <Button
+                        className="text-white px-8 font-extraboldExt md:hidden"
+                        onClick={() => window.open("https://x.com/Tonco_io", "_blank")}
+                        variant="secondary"
+                    >
                         <Image alt="x" src={xLogo} quality={100} />
+                    </Button>
+                    <Button
+                        onClick={() => window.open("https://docs.tonco.io", "_blank")}
+                        variant="secondary"
+                        className="text-white px-8 font-extraboldExt md:hidden"
+                    >
+                        <BookLogo />
                     </Button>
                 </div>
             </div>

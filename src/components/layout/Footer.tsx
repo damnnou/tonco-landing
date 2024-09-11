@@ -23,12 +23,12 @@ const Footer = () => {
                     src={tg.src}
                     className="object-contain shrink-0 aspect-square w-[108px] max-md:w-[75px] cursor-pointer hover:-translate-y-1 transition-all duration-200"
                 />
-                <img
+                {/* <img
                     // onClick={() => window.open("https://www.discord.com/tonco_io/", "_blank")}
                     loading="lazy"
                     src={discord.src}
                     className="object-contain shrink-0 aspect-square w-[108px] max-md:w-[75px] cursor-pointer hover:-translate-y-1 transition-all duration-200"
-                />
+                /> */}
             </div>
             <div className="mt-16 text-base tracking-wider leading-9 text-center text-green-700 max-md:mt-8 max-md:max-w-full">
                 © 2024 Tonco! All Rights Reserved
