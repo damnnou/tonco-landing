@@ -9,8 +9,7 @@ export default function DynamicFeesSection() {
             { y: 750 }, // начальное состояние
             {
                 y: 600,
-                duration: 0.5, // длительность анимации
-                ease: "power2.out",
+                duration: 1, // длительность анимации
                 scrollTrigger: {
                     trigger: "#dynamic-fees-section",
                     start: "top 100%", // начало анимации
@@ -25,12 +24,11 @@ export default function DynamicFeesSection() {
             { y: 200 },
             {
                 y: 0,
-                duration: 1,
-                ease: "power2.out",
+                duration: 5,
                 scrollTrigger: {
                     trigger: "#dynamic-fees-section",
                     start: "top 80%", // начало анимации
-                    end: "top 10%",
+                    end: "top 20%",
                     scrub: true, // привязка к скроллу
                 },
             }

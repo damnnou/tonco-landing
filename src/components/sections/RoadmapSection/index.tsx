@@ -8,11 +8,10 @@ export default function RoadmapSection() {
     React.useEffect(() => {
         gsap.fromTo(
             "#roadmap-section",
-            { y: 700 }, // начальное состояние
+            { y: 800 }, // начальное состояние
             {
                 y: 600,
-                duration: 0.5, // длительность анимации
-                ease: "power2.out",
+                duration: 1, // длительность анимации
                 scrollTrigger: {
                     trigger: "#roadmap-section",
                     start: "top 100%", // начало анимации
@@ -32,7 +31,7 @@ export default function RoadmapSection() {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: "#roadmap-section",
-                    start: "top 60%", // Начало анимации
+                    start: "top 50%", // Начало анимации
                     end: "top",
                     scrub: false,
                 },
@@ -44,8 +43,7 @@ export default function RoadmapSection() {
             { y: 200 },
             {
                 y: 0,
-                duration: 1,
-                ease: "power2.out",
+                duration: 5,
                 scrollTrigger: {
                     trigger: "#roadmap-section",
                     start: "top 80%", // начало анимации

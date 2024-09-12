@@ -33,12 +33,11 @@ export default function ConcentratedLiqSection() {
             { y: 300 },
             {
                 y: 0,
-                duration: 1,
-                ease: "power4.out",
+                duration: 5,
                 scrollTrigger: {
                     trigger: "#pea-blackhole",
                     start: "top 50%", // начало анимации
-                    end: "bottom -40%",
+                    end: "bottom 20%",
                     scrub: true, // привязка к скроллу
                 },
             }
@@ -49,8 +48,7 @@ export default function ConcentratedLiqSection() {
             { y: 300 },
             {
                 y: 0,
-                duration: 1,
-                ease: "power4.out",
+                duration: 5,
                 scrollTrigger: {
                     trigger: "#benefits-card-green",
                     start: maxMd ? "top 40%" : "top 100%", // начало анимации
@@ -66,11 +64,10 @@ export default function ConcentratedLiqSection() {
             {
                 y: 0,
                 duration: 1,
-                ease: "power4.out",
                 scrollTrigger: {
                     trigger: "#benefits-card-green",
                     start: "top 100%", // начало анимации
-                    end: "top 10%",
+                    end: "top 20%",
                     scrub: true, // привязка к скроллу
                 },
             }
@@ -82,11 +79,10 @@ export default function ConcentratedLiqSection() {
             {
                 y: 0,
                 duration: 1,
-                ease: "power4.out",
                 scrollTrigger: {
                     trigger: "#benefits-card-white",
                     start: "top 100%", // начало анимации
-                    end: "top 10%",
+                    end: "top 20%",
                     scrub: true, // привязка к скроллу
                 },
             }
