@@ -10,6 +10,8 @@ import ComparisonTableMobile from "./ComparisonTableMobile";
 
 export default function ConcentratedLiqSection() {
     useEffect(() => {
+        const maxMd = window.innerWidth < 820;
+
         gsap.fromTo(
             "#concentrated-liquidity-section",
             { y: 600 }, // начальное состояние
@@ -28,14 +30,14 @@ export default function ConcentratedLiqSection() {
 
         gsap.fromTo(
             "#benefits-card-green",
-            { y: 200 },
+            { y: 300 },
             {
                 y: 0,
                 duration: 1,
                 ease: "power4.out",
                 scrollTrigger: {
                     trigger: "#pea-blackhole",
-                    start: "top 10%", // начало анимации
+                    start: "top 50%", // начало анимации
                     end: "bottom -40%",
                     scrub: true, // привязка к скроллу
                 },
@@ -44,15 +46,47 @@ export default function ConcentratedLiqSection() {
 
         gsap.fromTo(
             "#benefits-card-white",
-            { y: 400 },
+            { y: 300 },
             {
                 y: 0,
                 duration: 1,
                 ease: "power4.out",
                 scrollTrigger: {
-                    trigger: "#pea-blackhole",
-                    start: "top 10%", // начало анимации
-                    end: "bottom -40%",
+                    trigger: "#benefits-card-green",
+                    start: maxMd ? "top 40%" : "top 100%", // начало анимации
+                    end: maxMd ? "bottom 50%" : "top 50%",
+                    scrub: true, // привязка к скроллу
+                },
+            }
+        );
+
+        gsap.fromTo(
+            "#benefits-card-green-inner",
+            { y: 200 },
+            {
+                y: 0,
+                duration: 1,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: "#benefits-card-green",
+                    start: "top 100%", // начало анимации
+                    end: "top 10%",
+                    scrub: true, // привязка к скроллу
+                },
+            }
+        );
+
+        gsap.fromTo(
+            "#benefits-card-white-inner",
+            { y: 200 },
+            {
+                y: 0,
+                duration: 1,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: "#benefits-card-white",
+                    start: "top 100%", // начало анимации
+                    end: "top 10%",
                     scrub: true, // привязка к скроллу
                 },
             }
@@ -98,7 +132,7 @@ export default function ConcentratedLiqSection() {
                     Concentrated <br /> Liquidity
                 </h1>
                 <p className="flex-1 text-[26px] max-md:text-[20px] shrink self-stretch my-auto tracking-wider leading-9 text-black basis-0 max-md:max-w-full">
-                    Efficient use of capital – boosts capital efficiency up to 95% compared to traditional V2 DEXs.
+                    Efficient use of capital – boosts capital efficiency up to 95% compared to traditional AMM models (V2)
                 </p>
             </div>
             <div id="pea-blackhole" className="rounded-xl w-full max-md:h-[360px] overflow-hidden">
