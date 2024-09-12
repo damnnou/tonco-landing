@@ -57,20 +57,6 @@ export default function HeroSection() {
                     <Button className="mx-auto " variant="action">
                         App Soon
                     </Button>
-                    <Button
-                        className="text-white px-8 font-extraboldExt md:hidden"
-                        onClick={() => window.open("https://x.com/Tonco_io", "_blank")}
-                        variant="secondary"
-                    >
-                        <img alt="x" src={xLogo.src} />
-                    </Button>
-                    <Button
-                        onClick={() => window.open("https://docs.tonco.io", "_blank")}
-                        variant="secondary"
-                        className="text-white px-8 font-extraboldExt md:hidden"
-                    >
-                        <BookLogo />
-                    </Button>
                 </div>
             </div>
         </section>
