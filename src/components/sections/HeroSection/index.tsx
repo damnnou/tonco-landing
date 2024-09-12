@@ -4,8 +4,6 @@ import rightTonCoins from "@/assets/right-ton.png";
 import pea from "@/assets/pea.png";
 import Button from "@/components/common/Button";
 import { Parallax } from "react-scroll-parallax";
-import xLogo from "@/assets/xLogo.svg";
-import BookLogo from "@/components/common/BookLogo";
 
 export default function HeroSection() {
     return (
@@ -54,7 +52,7 @@ export default function HeroSection() {
                 </p>
 
                 <div className="flex gap-4 animate-fade" style={{ animationDelay: "1.2s" }}>
-                    <Button className="mx-auto " variant="action">
+                    <Button className="mx-auto hover:translate-y-0" variant="action">
                         App Soon
                     </Button>
                 </div>

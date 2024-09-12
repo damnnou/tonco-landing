@@ -37,7 +37,7 @@ export default function Tap2EarnSection() {
     return (
         <section
             id="tap-to-earn-section"
-            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 p-5 bg-pink-900 rounded-xl"
+            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 p-5 pb-6 bg-pink-900 rounded-xl"
         >
             <div className="flex flex-col flex-1 shrink text-red-100 basis-0 min-w-[240px] max-md:max-w-full">
                 <div className="text-7xl font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
@@ -50,7 +50,7 @@ export default function Tap2EarnSection() {
             </div>
             <div
                 id="tap-to-earn-img"
-                className="flex overflow-hidden flex-col rounded-xl bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
+                className="flex overflow-hidden flex-col rounded-lg bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
             >
                 <img
                     loading="lazy"

@@ -37,11 +37,11 @@ export default function FarmingSection() {
     return (
         <section
             id="farming-section"
-            className="flex overflow-hidden w-full flex-wrap gap-10 justify-center items-start md:p-8 p-5 bg-emerald-100 rounded-xl"
+            className="flex overflow-hidden w-full flex-wrap gap-10 justify-center items-start md:p-8 p-5 pb-6 bg-emerald-100 rounded-xl"
         >
             <div
                 id="farming-img"
-                className="flex overflow-hidden flex-col max-md:order-1 rounded-xl bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
+                className="flex overflow-hidden flex-col max-md:order-1 rounded-lg bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
             >
                 <img loading="lazy" src={farmingImg.src} className="object-contain w-full aspect-square max-md:max-w-full" />
             </div>

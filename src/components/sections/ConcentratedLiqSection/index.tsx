@@ -91,7 +91,7 @@ export default function ConcentratedLiqSection() {
     return (
         <section
             id="concentrated-liquidity-section"
-            className="bg-[#ECEFF3] w-full flex flex-col p-16 max-md:p-4 gap-16 max-md:gap-4 rounded-xl"
+            className="bg-[#ECEFF3] w-full flex flex-col p-16 max-md:p-4 max-md:pb-5 gap-16 max-md:gap-4 rounded-xl"
         >
             <div className="flex flex-wrap max-md:flex-col gap-10 items-center w-full max-md:max-w-full">
                 <h1 className="self-stretch my-auto text-7xl text-green-700 font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
@@ -135,14 +135,14 @@ export default function ConcentratedLiqSection() {
                 >
                     up to 95% capital <br /> efficiency compared to <br /> traditional AMMs on TON
                 </div>
-                <div className="mt-8 text-2xl max-md:font-extended max-md:text-black tracking-wider leading-none max-md:max-w-full">
+                {/* <div className="mt-8 text-2xl max-md:font-extended max-md:text-black tracking-wider leading-none max-md:max-w-full">
                     <span>Concentrated Liquidity </span>
                     <span className="md:hidden">(V3 AMM) </span>
                     <span className="text-black max-md:text-green-700">vs</span>
                     <br className="md:hidden" />
                     <span>Classic DEXs </span>
                     <span className="md:hidden">(V2 AMM)</span>
-                </div>
+                </div> */}
             </div>
             <ComparisonTable />
             <ComparisonTableMobile />

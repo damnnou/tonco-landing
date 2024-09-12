@@ -5,6 +5,7 @@ import BookLogo from "../common/BookLogo";
 import XLogo from "../common/XLogo";
 import gsap from "gsap";
 import MenuLogo from "../common/MenuLogo";
+import TgLogo from "../common/TgLogo";
 
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = React.useState(false);
@@ -82,15 +83,16 @@ const Header: React.FC = () => {
                         variant="secondary"
                         className="px-8 font-extraboldExt"
                     >
-                        <BookLogo />
                         Docs
                     </Button>
                     <Button id="menu-button" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
-                        More Info
-                        <XLogo />
+                        <TgLogo />
                     </Button>
 
-                    <Button id="launch-button" variant="primary">
+                    <Button id="menu-button" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
+                        <XLogo />
+                    </Button>
+                    <Button className="hover:translate-y-0" id="launch-button" variant="primary">
                         App Soon
                     </Button>
                 </nav>

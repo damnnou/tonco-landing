@@ -51,33 +51,30 @@ export default function RoadmapSection() {
                     <img loading="lazy" src={q3_2024.src} className="object-contain max-w-full aspect-square w-[257px] rounded-full" />
                     <div className="flex flex-col justify-center mt-16 w-full max-md:mt-10">
                         <div className="text-4xl font-extraboldExt tracking-tighter leading-none">Q3 2024</div>
-                        <div className="mt-8 text-2xl tracking-wider leading-9">
-                            Development & testnet launch
-                            <br />
-                            Audits 
-                        </div>
+                        <ul className="mt-8 ml-5 text-2xl tracking-wider leading-9 list-disc">
+                            <li>Development & testnet launch</li>
+                            <li>Audits</li>
+                        </ul>
                     </div>
                 </div>
                 <div id="roadmap-phase" className="flex flex-col grow shrink min-w-[240px] w-[298px]">
                     <img loading="lazy" src={q4_2024.src} className="object-contain max-w-full aspect-square w-[257px] rounded-full" />
                     <div className="flex flex-col justify-center mt-16 w-full max-md:mt-10">
                         <div className="text-4xl font-extraboldExt tracking-tighter leading-none">Q4 2024</div>
-                        <div className="mt-8 text-2xl tracking-wider leading-9">
-                            Mainnet launch on TON
-                            <br />
-                            More partnerships with TON-based projects
-                        </div>
+                        <ul className="mt-8 ml-5 text-2xl tracking-wider leading-9 list-disc">
+                            <li>Mainnet launch on TON</li>
+                            <li>More partnerships with TON-based projects</li>
+                        </ul>
                     </div>
                 </div>
                 <div id="roadmap-phase" className="flex flex-col grow shrink min-w-[240px] w-[299px]">
                     <img loading="lazy" src={q1_2025.src} className="object-contain max-w-full aspect-square w-[257px] rounded-full" />
                     <div className="flex flex-col justify-center mt-16 w-full max-md:mt-10">
                         <div className="text-4xl font-extraboldExt tracking-tighter leading-none">Q1-Q2 2025</div>
-                        <div className="mt-8 text-2xl tracking-wider leading-9">
-                            Farming events
-                            <br />
-                            TON App Listing
-                        </div>
+                        <ul className="mt-8 ml-5 text-2xl tracking-wider leading-9 list-disc">
+                            <li>Farming events</li>
+                            <li>TON App Listing</li>
+                        </ul>
                     </div>
                 </div>
             </div>

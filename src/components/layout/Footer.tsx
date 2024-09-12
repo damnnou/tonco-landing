@@ -1,6 +1,5 @@
 import x from "@/assets/socials/x.svg";
 import tg from "@/assets/socials/tg.svg";
-import discord from "@/assets/socials/discord.svg";
 
 const Footer = () => {
     return (

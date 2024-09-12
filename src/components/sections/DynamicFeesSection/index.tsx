@@ -37,7 +37,7 @@ export default function DynamicFeesSection() {
     return (
         <section
             id="dynamic-fees-section"
-            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 p-5 rounded-xl bg-neutral-900"
+            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 p-5 pb-6 rounded-xl bg-neutral-900"
         >
             <div className="flex flex-col flex-1 shrink text-[#D3F7CC] basis-0 min-w-[240px] max-md:max-w-full">
                 <div className="text-7xl font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
@@ -49,7 +49,7 @@ export default function DynamicFeesSection() {
                 </div>
             </div>
 
-            <div id="dynamic-fees-img" className="flex flex-col rounded-xl bg-zinc-300 min-w-[240px] max-w-[600px] overflow-hidden">
+            <div id="dynamic-fees-img" className="flex flex-col rounded-lg bg-zinc-300 min-w-[240px] max-w-[600px] overflow-hidden">
                 <img loading="lazy" src={dynamicFeesImg.src} className="object-contain w-full max-md:max-w-full" />
             </div>
         </section>
