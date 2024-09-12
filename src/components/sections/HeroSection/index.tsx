@@ -5,11 +5,14 @@ import pea from "@/assets/pea.png";
 import Button from "@/components/common/Button";
 import { Parallax } from "react-scroll-parallax";
 import xLogo from "@/assets/xLogo.svg";
-import { BookLogo } from "@/components/layout/Header";
+import BookLogo from "@/components/common/BookLogo";
 
 export default function HeroSection() {
     return (
-        <section className="flex flex-col items-center justify-between w-full tall:h-screen h-[900px] max-md:pb-8 max-md:h-screen text-white">
+        <section
+            id="hero-section"
+            className="flex flex-col items-center justify-between w-full tall:h-screen h-[900px] max-md:pb-8 max-md:h-screen text-white"
+        >
             <div className="w-screen tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden max-md:h-screen max-md:max-h-screen">
                 <img className="object-cover w-full h-full" alt="background-image" src={bg.src} />
             </div>
@@ -25,7 +28,7 @@ export default function HeroSection() {
                 <img className="animate-right-in" alt="right-ton-coins" src={rightTonCoins.src} />
             </Parallax>
 
-            <div className="flex flex-col h-72 items-center gap-8 max-md:gap-6 tall:my-auto max-md:my-auto mt-72 justify-between relative">
+            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[180px] mt-[400px] justify-between relative">
                 <img
                     className="absolute -top-[340px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
                     alt="pea"

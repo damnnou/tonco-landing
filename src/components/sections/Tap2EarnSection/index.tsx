@@ -6,9 +6,9 @@ export default function Tap2EarnSection() {
     React.useEffect(() => {
         gsap.fromTo(
             "#tap-to-earn-section",
-            { y: 600 }, // начальное состояние
+            { y: 700 }, // начальное состояние
             {
-                y: 500,
+                y: 600,
                 duration: 0.5, // длительность анимации
                 ease: "power2.out",
                 scrollTrigger: {
@@ -37,9 +37,9 @@ export default function Tap2EarnSection() {
     return (
         <section
             id="tap-to-earn-section"
-            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 bg-pink-900 rounded-xl"
+            className="flex overflow-hidden flex-wrap gap-10 w-full justify-center items-start md:p-8 p-5 bg-pink-900 rounded-xl"
         >
-            <div className="flex flex-col flex-1 shrink text-red-100 basis-0 min-w-[240px] max-md:max-w-full max-md:px-5 max-md:pt-8">
+            <div className="flex flex-col flex-1 shrink text-red-100 basis-0 min-w-[240px] max-md:max-w-full">
                 <div className="text-7xl font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">
                     The Tap-to-Earn Capabilities
                 </div>
@@ -50,7 +50,7 @@ export default function Tap2EarnSection() {
             </div>
             <div
                 id="tap-to-earn-img"
-                className="flex overflow-hidden flex-col rounded-xl max-md:rounded-tr-none max-md:rounded-tl-none bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
+                className="flex overflow-hidden flex-col rounded-xl bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
             >
                 <img
                     loading="lazy"

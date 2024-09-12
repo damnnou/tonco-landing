@@ -6,9 +6,9 @@ export default function FarmingSection() {
     React.useEffect(() => {
         gsap.fromTo(
             "#farming-section",
-            { y: 600 }, // начальное состояние
+            { y: 700 }, // начальное состояние
             {
-                y: 500,
+                y: 600,
                 duration: 0.5, // длительность анимации
                 ease: "power2.out",
                 scrollTrigger: {
@@ -37,15 +37,15 @@ export default function FarmingSection() {
     return (
         <section
             id="farming-section"
-            className="flex overflow-hidden w-full flex-wrap gap-10 justify-center items-start md:p-8 bg-emerald-100 rounded-xl"
+            className="flex overflow-hidden w-full flex-wrap gap-10 justify-center items-start md:p-8 p-5 bg-emerald-100 rounded-xl"
         >
             <div
                 id="farming-img"
-                className="flex overflow-hidden flex-col max-md:order-1 rounded-xl max-md:rounded-tr-none max-md:rounded-tl-none bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
+                className="flex overflow-hidden flex-col max-md:order-1 rounded-xl bg-zinc-300 min-w-[240px] w-[600px] max-md:max-w-full"
             >
                 <img loading="lazy" src={farmingImg.src} className="object-contain w-full aspect-square max-md:max-w-full" />
             </div>
-            <div className="flex flex-col flex-1 shrink text-lime-800 basis-0 min-w-[240px] max-md:max-w-full max-md:px-5 max-md:pt-8">
+            <div className="flex flex-col flex-1 shrink text-lime-800 basis-0 min-w-[240px] max-md:max-w-full">
                 <div className="text-7xl font-extended max-md:max-w-full max-md:text-4xl max-md:leading-10">On-chain Farming</div>
                 <div className="mt-16 text-2xl tracking-wider leading-9 max-md:mt-10 max-md:max-w-full">
                     Rewarding our Liquidity Providers on-chain with extra incentives.

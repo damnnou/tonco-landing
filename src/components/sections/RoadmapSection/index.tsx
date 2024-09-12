@@ -8,9 +8,9 @@ export default function RoadmapSection() {
     React.useEffect(() => {
         gsap.fromTo(
             "#roadmap-section",
-            { y: 600 }, // начальное состояние
+            { y: 700 }, // начальное состояние
             {
-                y: 500,
+                y: 600,
                 duration: 0.5, // длительность анимации
                 ease: "power2.out",
                 scrollTrigger: {
@@ -43,7 +43,7 @@ export default function RoadmapSection() {
     return (
         <section
             id="roadmap-section"
-            className="flex overflow-hidden flex-col w-full p-16 max-md:p-8 my-8 text-black rounded-xl bg-[#EFF7F5] max-md:px-5"
+            className="flex overflow-hidden flex-col w-full p-16 max-md:p-8 my-8 text-black rounded-xl bg-[#EFF7F5] max-md:px-5 "
         >
             <div className="text-7xl font-extraboldExt leading-none max-md:max-w-full max-md:text-4xl">Roadmap</div>
             <div className="flex flex-wrap gap-10 justify-center items-start mt-32 w-full max-md:mt-10 max-md:max-w-full">

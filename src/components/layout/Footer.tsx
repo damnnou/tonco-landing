@@ -4,11 +4,10 @@ import discord from "@/assets/socials/discord.svg";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col mt-8 py-16 gap-8 max-md:gap-2 max-md:py-8 items-center w-fit justify-center relative top-[500px]">
+        <footer className="flex flex-col mt-8 py-16 gap-8 max-md:gap-2 max-md:py-8 items-center w-fit justify-center relative top-[600px]">
             <div className="text-7xl text-center text-green-700 font-extended max-md:max-w-full max-md:text-[40px] max-md:leading-10">
                 Follow us to stay
-                <br className="max-md:hidden" />
-                in touch.
+                <br className="max-md:hidden" /> in touch.
             </div>
             <div className="flex gap-10 items-start self-center mt-16 max-md:mt-8">
                 <img

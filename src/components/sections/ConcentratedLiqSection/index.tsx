@@ -12,9 +12,9 @@ export default function ConcentratedLiqSection() {
     useEffect(() => {
         gsap.fromTo(
             "#concentrated-liquidity-section",
-            { y: 500 }, // начальное состояние
+            { y: 600 }, // начальное состояние
             {
-                y: 500,
+                y: 600,
                 duration: 0.5, // длительность анимации
                 ease: "power2.out",
                 scrollTrigger: {

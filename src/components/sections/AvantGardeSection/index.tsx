@@ -44,12 +44,12 @@ const AvantGardeSection: React.FC = () => {
 
         gsap.fromTo(
             "#avant-garde-section",
-            { y: 40 },
+            { y: 140 },
             {
-                y: 40, // Настройте значение для фиксированного эффекта
+                y: 140, // Настройте значение для фиксированного эффекта
                 scrollTrigger: {
                     trigger: "#avant-garde-section",
-                    start: window.innerWidth < 820 || window.innerHeight < 900 ? "top 30px" : "top 100px", // Начало фиксации
+                    start: window.innerWidth < 820 || window.innerHeight < 900 ? "top 100px" : "top 250px", // Начало фиксации
                     end: "+=400", // Продолжительность фиксации
                     scrub: true,
                     pin: true, // Фиксирует секцию на месте
