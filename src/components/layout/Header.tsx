@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import Button from "../common/Button";
 import TONCOLogo from "../common/TONCOLogo";
-import BookLogo from "../common/BookLogo";
 import XLogo from "../common/XLogo";
 import gsap from "gsap";
 import MenuLogo from "../common/MenuLogo";
 import TgLogo from "../common/TgLogo";
+import { X } from "lucide-react";
 
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = React.useState(false);
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
                     id="menu-button"
                     className={"p-2 rounded-xl border border-white md:hidden" + (menuOpen ? " !border-[#0e7490]" : " ")}
                 >
-                    <MenuLogo className={menuOpen ? "!text-[#0e7490]" : ""} />
+                    {menuOpen ? <X className="!text-[#0e7490]" /> : <MenuLogo className={menuOpen ? "!fill-[#0e7490]" : ""} />}
                 </button>
                 <nav className="flex gap-5 items-center max-md:hidden">
                     <Button
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                     >
                         Docs
                     </Button>
-                    <Button id="menu-button" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
+                    <Button id="menu-button" onClick={() => window.open("https://t.me/tonco_io", "_blank")} variant="secondary">
                         <TgLogo />
                     </Button>
 
