@@ -92,8 +92,8 @@ const Header: React.FC = () => {
                     <Button id="menu-button" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
                         <XLogo />
                     </Button>
-                    <Button className="hover:translate-y-0" id="launch-button" variant="primary">
-                        App Soon
+                    <Button onClick={() => window.open("https://testnet.tonco.io", "_blank")} id="launch-button" variant="primary">
+                        Launch App
                     </Button>
                 </nav>
             </div>
@@ -113,8 +113,13 @@ const Header: React.FC = () => {
                         </svg>
                     </li>
                 </ul>
-                <Button className={menuOpen ? "!bg-[#0e7490] !text-white" : ""} id="launch-button" variant="primary">
-                    App Soon
+                <Button
+                    onClick={() => window.open("https://testnet.tonco.io", "_blank")}
+                    className={menuOpen ? "!bg-[#0e7490] !text-white" : ""}
+                    id="launch-button"
+                    variant="primary"
+                >
+                    Launch App
                 </Button>
             </nav>
         </header>
