@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <ParallaxProvider>
             <Head>
+                <link rel="icon" href="/favicon.ico?v=2" />
                 <title>TONCO - THE FIRST CONCENTRATED LIQUIDITY DEX ON TON</title>
             </Head>
             <Component {...pageProps}></Component>
