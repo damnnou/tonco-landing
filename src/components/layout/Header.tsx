@@ -92,7 +92,12 @@ const Header: React.FC = () => {
                     <Button id="menu-button" onClick={() => window.open("https://x.com/Tonco_io", "_blank")} variant="secondary">
                         <XLogo />
                     </Button>
-                    <Button onClick={() => window.open("https://testnet.tonco.io", "_blank")} id="launch-button" variant="primary">
+                    <Button
+                        className="hover:!translate-y-0"
+                        // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
+                        id="launch-button"
+                        variant="primary"
+                    >
                         Launch App
                     </Button>
                 </nav>
@@ -114,8 +119,8 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
                 <Button
-                    onClick={() => window.open("https://testnet.tonco.io", "_blank")}
-                    className={menuOpen ? "!bg-[#0e7490] !text-white" : ""}
+                    // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
+                    className={menuOpen ? "!bg-[#0e7490] !text-white hover:!translate-y-0" : ""}
                     id="launch-button"
                     variant="primary"
                 >
