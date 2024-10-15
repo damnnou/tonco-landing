@@ -97,8 +97,9 @@ const Header: React.FC = () => {
                         // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
                         id="launch-button"
                         variant="primary"
+                        disabled
                     >
-                        Launch App
+                        Launching Soon
                     </Button>
                 </nav>
             </div>
@@ -119,12 +120,13 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
                 <Button
+                    disabled
                     // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
                     className={menuOpen ? "!bg-[#0e7490] !text-white hover:!translate-y-0" : ""}
                     id="launch-button"
                     variant="primary"
                 >
-                    Launch App
+                    Launching Soon
                 </Button>
             </nav>
         </header>

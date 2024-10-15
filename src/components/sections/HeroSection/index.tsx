@@ -53,11 +53,12 @@ export default function HeroSection() {
 
                 <div className="flex gap-4 animate-fade" style={{ animationDelay: "1.2s" }}>
                     <Button
+                        disabled
                         // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
                         className="mx-auto hover:!translate-y-0"
                         variant="action"
                     >
-                        Launch App
+                        Launching Soon
                     </Button>
                 </div>
             </div>
