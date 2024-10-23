@@ -38,9 +38,9 @@ export default function HeroSection() {
                 /> */}
             </Parallax>
 
-            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[80px] mt-[400px] justify-between relative">
+            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[80px] mt-[400px] overflow-visible justify-between relative">
                 <img
-                    className=" w-[250px] absolute -top-[300px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
+                    className="overflow-visible w-[250px] absolute -top-[300px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
                     alt="pea"
                     src={pea.src}
                 />
