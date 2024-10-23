@@ -1,5 +1,6 @@
 import Button from '@/components/common/Button';
 import { Parallax } from 'react-scroll-parallax';
+import pea from '@/assets/hero-char.png';
 
 export default function HeroSection() {
     return (
@@ -37,12 +38,12 @@ export default function HeroSection() {
                 /> */}
             </Parallax>
 
-            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[180px] mt-[400px] justify-between relative">
-                {/* <img
-                    className="absolute -top-[340px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
+            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[80px] mt-[400px] justify-between relative">
+                <img
+                    className=" w-[250px] absolute -top-[300px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
                     alt="pea"
                     src={pea.src}
-                /> */}
+                />
                 <h1 className="flex flex-col text-[80px] text-center max-md:max-w-full max-md:text-[36px] max-md:leading-10 font-extended leading-[80px]">
                     <span
                         className="opacity-0 animate-text-fly-in animate-fill-forwards"

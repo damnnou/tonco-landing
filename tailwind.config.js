@@ -14,8 +14,8 @@ module.exports = {
                 'max-md': { raw: '(max-width: 820px)' },
             },
             colors: {
-                background: '#EFFAED',
-                primary: '#3AB62A',
+                background: '#E8F5F1',
+                primary: '#10B68B',
             },
             fontSize: {
                 '2xl': '22px',

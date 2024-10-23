@@ -4,7 +4,7 @@ import ComparisonTableMobile from '../ConcentratedLiqSection/ComparisonTableMobi
 
 export default function NextGenLiquidity() {
     return (
-        <div className="flex flex-col gap-24 items-center w-full bg-white p-8 md:p-[156px]">
+        <div className="flex flex-col gap-24 items-center w-full bg-white px-4 p-8 md:p-[156px] md:px-24">
             <div className="flex flex-col max-w-full  w-full">
                 <h2 className="text-7xl text-center font-semibold tracking-tighter leading-none max-md:max-w-full max-md:text-4xl">
                     Next-Gen Liquidity <br /> Model

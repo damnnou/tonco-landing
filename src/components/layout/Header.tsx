@@ -10,60 +10,76 @@ import { X } from 'lucide-react';
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = React.useState(false);
 
-    // useEffect(() => {
-    //     gsap.fromTo(
-    //         "header",
-    //         { backgroundColor: "rgba(255, 255, 255, 0)" },
-    //         {
-    //             backgroundColor: "rgba(255, 255, 255,1)",
-    //             boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.3)",
-    //             scrollTrigger: {
-    //                 trigger: "#hero-section",
-    //                 start: "top top",
-    //                 end: "bottom",
-    //                 scrub: true,
-    //             },
-    //         }
-    //     );
+    useEffect(() => {
+        gsap.fromTo(
+            'header',
+            { backgroundColor: 'rgba(255, 255, 255, 0)' },
+            {
+                backgroundColor: 'rgba(255, 255, 255,1)',
+                boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.3)',
+                scrollTrigger: {
+                    trigger: '#hero-section',
+                    start: 'top top',
+                    end: 'bottom',
+                    scrub: true,
+                },
+            }
+        );
 
-    //     gsap.fromTo(
-    //         "#menu-button",
-    //         { color: "white", borderColor: "white" },
-    //         {
-    //             color: "rgb(56 118 162)",
-    //             borderColor: "rgb(56 118 162)",
-    //             duration: 0.1,
-    //             scrollTrigger: { trigger: "#hero-section", start: "bottom 80%", end: "bottom 80%", scrub: true },
-    //         }
-    //     );
+        // gsap.fromTo(
+        //     '#menu-button',
+        //     { color: 'black' },
+        //     {
+        //         color: 'black',
+        //         duration: 0.1,
+        //         scrollTrigger: {
+        //             trigger: '#hero-section',
+        //             start: 'bottom 80%',
+        //             end: 'bottom 80%',
+        //             scrub: true,
+        //         },
+        //     }
+        // );
 
-    //     gsap.fromTo(
-    //         "#launch-button",
-    //         { color: "#0e7490", backgroundColor: "white", borderColor: "white" },
-    //         {
-    //             color: "white",
-    //             backgroundColor: "rgb(56 118 162)",
-    //             duration: 0.1,
-    //             scrollTrigger: { trigger: "#hero-section", start: "bottom 80%", end: "bottom 80%", scrub: true },
-    //         }
-    //     );
+        // gsap.fromTo(
+        //     '#launch-button',
+        //     {
+        //         backgroundColor: '#10B68B',
+        //     },
+        //     {
+        //         color: 'white',
+        //         backgroundColor: '10B68B',
+        //         duration: 0.1,
+        //         scrollTrigger: {
+        //             trigger: '#hero-section',
+        //             start: 'bottom 80%',
+        //             end: 'bottom 80%',
+        //             scrub: true,
+        //         },
+        //     }
+        // );
 
-    //     gsap.fromTo(
-    //         "#to-fill",
-    //         { fill: "white" },
-    //         {
-    //             fill: "rgb(56 118 162)",
-    //             duration: 0.1,
-    //             scrollTrigger: { trigger: "#hero-section", start: "bottom 80%", end: "bottom 80%", scrub: true },
-    //         }
-    //     );
-    // }, []);
+        // gsap.fromTo(
+        //     '#to-fill',
+        //     { fill: 'white' },
+        //     {
+        //         fill: 'rgb(56 118 162)',
+        //         duration: 0.1,
+        //         scrollTrigger: {
+        //             trigger: '#hero-section',
+        //             start: 'bottom 80%',
+        //             end: 'bottom 80%',
+        //             scrub: true,
+        //         },
+        //     }
+        // );
+    }, []);
 
     return (
         <header
             className={
-                'flex z-20 w-full h-fit animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500 fixed transition-all duration-200 max-md:flex-col overflow-hidden' +
-                (menuOpen ? ' max-md:h-[260px] !bg-white' : ' max-md:h-[74px]')
+                'flex z-20 w-full h-fit animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500 bg-white fixed transition-all duration-200 max-md:flex-col overflow-hidden' +
+                (menuOpen ? ' max-md:h-[260px] !bg-white ' : ' max-md:h-[74px]')
             }
             style={{ animationDelay: '1.2s' }}
         >
@@ -73,7 +89,7 @@ const Header: React.FC = () => {
                     onClick={() => setMenuOpen(!menuOpen)}
                     id="menu-button"
                     className={
-                        'p-2 rounded-xl border border-0 md:hidden' +
+                        'p-2 rounded-xl  md:hidden' +
                         (menuOpen ? ' !border-primary-green' : ' ')
                     }
                 >

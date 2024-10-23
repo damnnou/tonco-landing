@@ -1,5 +1,6 @@
-import Button from '@/components/common/Button';
+import { Minus, Plus } from 'lucide-react';
 import { useState } from 'react';
+import peaHero from '@/assets/hero-char.png';
 
 export interface FAQItemProps {
     question: string;
@@ -49,128 +50,20 @@ const FAQItem: React.FC<FAQItemProps> = ({
     return (
         <article
             onClick={() => setExpanded(!expanded)}
-            className=" cursor-pointer flex flex-wrap gap-10 justify-between items-center px-6 py-3.5 mt-4 w-full bg-[#E8F5F1] rounded-3xl min-h-[72px] max-md:px-5 max-md:max-w-full"
+            className="cursor-pointer flex flex-col bg-[#E8F5F1] rounded-3xl min-h-fit max-md:px-5 p-5 transition-all duration-200"
         >
-            <h3 className="self-stretch my-auto text-lg font-semibold tracking-tighter leading-none text-primary">
-                {question}
-            </h3>
-            <svg
-                width="44"
-                height="44"
-                viewBox="0 0 44 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <g filter="url(#filter0_bi_972_1276)">
-                    <rect width="44" height="44" rx="22" fill="#3AB62A" />
-                    <rect
-                        width="44"
-                        height="44"
-                        rx="22"
-                        fill="#F8F8F8"
-                        fill-opacity="0.1"
-                    />
-                    <rect
-                        x="0.75"
-                        y="0.75"
-                        width="42.5"
-                        height="42.5"
-                        rx="21.25"
-                        stroke="url(#paint0_linear_972_1276)"
-                        stroke-opacity="0.25"
-                        stroke-width="1.5"
-                    />
-                    <g opacity="0.8">
-                        <path
-                            d="M22 13.75V22M22 22V30.25M22 22H13.75M22 22H30.25"
-                            stroke="#F8F8F8"
-                            stroke-opacity="0.95"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    </g>
-                </g>
-                <defs>
-                    <filter
-                        id="filter0_bi_972_1276"
-                        x="-100"
-                        y="-100"
-                        width="244"
-                        height="244"
-                        filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
-                    >
-                        <feFlood
-                            flood-opacity="0"
-                            result="BackgroundImageFix"
-                        />
-                        <feGaussianBlur
-                            in="BackgroundImageFix"
-                            stdDeviation="50"
-                        />
-                        <feComposite
-                            in2="SourceAlpha"
-                            operator="in"
-                            result="effect1_backgroundBlur_972_1276"
-                        />
-                        <feBlend
-                            mode="normal"
-                            in="SourceGraphic"
-                            in2="effect1_backgroundBlur_972_1276"
-                            result="shape"
-                        />
-                        <feColorMatrix
-                            in="SourceAlpha"
-                            type="matrix"
-                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                            result="hardAlpha"
-                        />
-                        <feOffset dx="2" dy="4" />
-                        <feGaussianBlur stdDeviation="8" />
-                        <feComposite
-                            in2="hardAlpha"
-                            operator="arithmetic"
-                            k2="-1"
-                            k3="1"
-                        />
-                        <feColorMatrix
-                            type="matrix"
-                            values="0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 0.06 0"
-                        />
-                        <feBlend
-                            mode="normal"
-                            in2="shape"
-                            result="effect2_innerShadow_972_1276"
-                        />
-                    </filter>
-                    <linearGradient
-                        id="paint0_linear_972_1276"
-                        x1="22"
-                        y1="-4.99302e-07"
-                        x2="41.1409"
-                        y2="48.3174"
-                        gradientUnits="userSpaceOnUse"
-                    >
-                        <stop stop-color="white" stop-opacity="0.4" />
-                        <stop
-                            offset="0.4"
-                            stop-color="white"
-                            stop-opacity="0.01"
-                        />
-                        <stop
-                            offset="0.6"
-                            stop-color="white"
-                            stop-opacity="0.01"
-                        />
-                        <stop
-                            offset="1"
-                            stop-color="white"
-                            stop-opacity="0.1"
-                        />
-                    </linearGradient>
-                </defs>
-            </svg>
+            <div className="flex items-center gap-4 w-full justify-between">
+                <h3 className="self-stretch my-auto max-md:text-md font-semibold tracking-tighter leading-none text-primary max-w-3/4">
+                    {question}
+                </h3>
+                <div className="min-w-11 min-h-11 max-md:min-w-8 max-md:min-h-8 bg-primary rounded-full flex items-center justify-center text-[#F8F8F8]">
+                    {expanded ? (
+                        <Minus className="max-md:size-4" />
+                    ) : (
+                        <Plus className="max-md:size-4" />
+                    )}
+                </div>
+            </div>
 
             {expanded && answer && (
                 <div
@@ -186,17 +79,21 @@ const FAQItem: React.FC<FAQItemProps> = ({
 
 export default function FAQ() {
     return (
-        <div className="flex flex-col items-center w-full bg-white p-8 md:p-[156px]">
+        <div className="flex flex-col items-center w-full bg-white p-4 md:p-[156px] md:py-[114px]">
+            <img
+                className="w-[210px] mb-8 max-md:w-[180px]"
+                src={peaHero.src}
+            />
             <h2 className="text-7xl font-semibold tracking-tighter leading-none max-md:max-w-full max-md:text-4xl">
                 FAQ
             </h2>
-            <section className="flex flex-col mt-16 w-full max-md:mt-10 max-md:max-w-full">
+            <section className="flex flex-col mt-16 gap-4 w-full max-md:mt-10 max-md:max-w-full">
                 {faqData.map((item, index) => (
                     <FAQItem
                         key={index}
                         question={item.question}
                         answer={item.answer}
-                        isExpanded={index === 0}
+                        isExpanded={false}
                     />
                 ))}
             </section>

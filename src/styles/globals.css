@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --background: #effaed;
-    --primary: #3ab62a;
+    --background: #e8f5f1;
+    --primary: #10b68b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +25,10 @@ h3,
 h4,
 h5 {
     color: var(--primary);
+}
+
+h1 {
+    font-weight: bold;
 }
 
 p {
