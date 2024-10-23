@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #effaed;
+    --primary: #3ab62a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,8 +15,20 @@
 }
 
 body {
-    color: var(--foreground);
     background: var(--background);
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--primary);
+}
+
+p {
+    color: black;
 }
 
 @layer utilities {

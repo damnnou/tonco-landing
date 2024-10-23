@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
-import AvantGardeSection from "../sections/AvantGardeSection";
-import ConcentratedLiqSection from "../sections/ConcentratedLiqSection";
-import DynamicFeesSection from "../sections/DynamicFeesSection";
-import FarmingSection from "../sections/FarmingSection";
-import HeroSection from "../sections/HeroSection";
-import RoadmapSection from "../sections/RoadmapSection";
-import Tap2EarnSection from "../sections/Tap2EarnSection";
+import { useEffect, useState } from 'react';
+import AvantGardeSection from '../sections/AvantGardeSection';
+import ConcentratedLiqSection from '../sections/ConcentratedLiqSection';
+import DynamicFeesSection from '../sections/DynamicFeesSection';
+import FarmingSection from '../sections/FarmingSection';
+import HeroSection from '../sections/HeroSection';
+import RoadmapSection from '../sections/RoadmapSection';
+import Tap2EarnSection from '../sections/Tap2EarnSection';
+import WhyTONCO from '../sections/WhyTONCO';
+import NextGenLiquidity from '../sections/NextGenLiquidity';
+import PoweringDefiOnTON from '../sections/PoweringDefiOnTON';
+import FAQ from '../sections/FAQ';
 
 const Main = () => {
     // const [hasScrolled, setHasScrolled] = useState(false);
@@ -37,12 +41,16 @@ const Main = () => {
     return (
         <main className="flex flex-col gap-8 px-8 max-md:px-0 items-center w-full">
             <HeroSection />
-            <AvantGardeSection />
+            <WhyTONCO />
+            <NextGenLiquidity />
+            <PoweringDefiOnTON />
+            <FAQ />
+            {/* <AvantGardeSection />
             <ConcentratedLiqSection />
             <DynamicFeesSection />
             <FarmingSection />
             <Tap2EarnSection />
-            <RoadmapSection />
+            <RoadmapSection /> */}
         </main>
     );
 };
