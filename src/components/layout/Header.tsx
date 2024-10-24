@@ -79,7 +79,7 @@ const Header: React.FC = () => {
         <header
             className={
                 'flex z-20 w-full h-fit animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500 bg-white fixed transition-all duration-200 max-md:flex-col overflow-hidden' +
-                (menuOpen ? ' max-md:h-[260px] !bg-white ' : ' max-md:h-[74px]')
+                (menuOpen ? ' max-md:h-[290px] !bg-white ' : ' max-md:h-[74px]')
             }
             style={{ animationDelay: '1.2s' }}
         >
@@ -105,10 +105,20 @@ const Header: React.FC = () => {
                     <Button
                         id="menu-button"
                         onClick={() =>
+                            window.open('https://blog.tonco.io', '_blank')
+                        }
+                        variant="secondary"
+                        className="px-8 font-extraboldExt w-[106px]"
+                    >
+                        Blog
+                    </Button>
+                    <Button
+                        id="menu-button"
+                        onClick={() =>
                             window.open('https://docs.tonco.io', '_blank')
                         }
                         variant="secondary"
-                        className="px-8 font-extraboldExt"
+                        className="px-8 font-extraboldExt w-[106px]"
                     >
                         Docs
                     </Button>
@@ -144,6 +154,14 @@ const Header: React.FC = () => {
             </div>
             <nav className="flex flex-col p-5 pt-0 w-full gap-5 mx-auto text-black md:hidden">
                 <ul className="flex flex-col gap-2 font-extraboldExt">
+                    <li
+                        className="cursor-pointer"
+                        onClick={() =>
+                            window.open('https://blog.tonco.io', '_blank')
+                        }
+                    >
+                        Blog
+                    </li>
                     <li
                         className="cursor-pointer"
                         onClick={() =>

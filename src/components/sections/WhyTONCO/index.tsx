@@ -50,10 +50,7 @@ export default function WhyTONCO() {
                     </div>
                 </div>
             </div>
-            <Button
-                variant="primary"
-                className="rounded-lg mt-16 w-fit mx-auto px-8 z-10"
-            >
+            <Button variant="action" className="mt-16 w-fit mx-auto px-8 z-10">
                 Read the Docs
             </Button>
         </div>

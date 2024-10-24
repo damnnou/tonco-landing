@@ -76,6 +76,22 @@ module.exports = {
                         transform: 'translateX(0)',
                     },
                 },
+                'rotate-in': {
+                    '0%': {
+                        transform: 'rotate(0deg)',
+                    },
+                    '100%': {
+                        transform: 'rotate(180deg)',
+                    },
+                },
+                'rotate-out': {
+                    '0%': {
+                        transform: 'rotate(180deg)',
+                    },
+                    '100%': {
+                        transform: 'rotate(0deg)',
+                    },
+                },
             },
         },
         animation: {
@@ -86,6 +102,8 @@ module.exports = {
                 'gravity 5s infinite linear, pea-fly-in 1s ease-in-out',
             'left-in': 'left-in 1s ease-in-out',
             'right-in': 'right-in 1s ease-in-out',
+            'rotate-in': 'rotate-in 0.2s ease-in-out',
+            'rotate-out': 'rotate-out 0.2s ease-in-out',
         },
     },
     plugins: [require('tailwindcss-animated')],

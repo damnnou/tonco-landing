@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
             ? ' px-5'
             : variant === 'action'
             ? ' text-xl min-h-[74px] text-[24px] max-md:min-h-[58px] md:h-[74px] max-md:text-[16px] px-8'
-            : ' px-5';
+            : ' px-5 !bg-white border border-primary !text-primary';
 
     return (
         <button

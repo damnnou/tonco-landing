@@ -6,7 +6,7 @@ import v4Plugins from '@/assets/poweringdefi/v4-plugins.svg';
 
 export default function PoweringDefiOnTON() {
     return (
-        <div className="flex flex-col gap-12 items-center w-full bg-background px-4 p-8 md:p-[156px] relative  rounded-3xl">
+        <div className="flex flex-col gap-12 items-center w-full bg-background px-4 p-8 md:p-[156px] md:py-[114px]  relative  rounded-3xl">
             <img
                 className="absolute top-24 left-12 max-md:top-48 max-md:left-0 max-md:w-44"
                 src={peaAngry.src}
@@ -57,8 +57,8 @@ export default function PoweringDefiOnTON() {
                 </div>
             </div>
             <Button
-                variant="primary"
-                className="rounded-lg mt-16 max-md:mb-4 max-md:mt-0 w-fit mx-auto px-8"
+                variant="action"
+                className="mt-16 max-md:mb-4 max-md:mt-0 w-fit mx-auto px-8"
             >
                 Try it Out
             </Button>
