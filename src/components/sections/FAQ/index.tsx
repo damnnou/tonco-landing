@@ -2,6 +2,7 @@ import { Minus, Plus } from 'lucide-react';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import peaHero from '@/assets/hero-char.png';
 import Button from '@/components/common/Button';
+import WaitlistModal from '@/components/WaitlistModal';
 
 export interface FAQItemProps {
     question: string;
@@ -61,9 +62,11 @@ const faqData: FAQData[] = [
             <div className="flex flex-col gap-4">
                 The TONCO Testnet is launching soon. Get early access by joining
                 our waitlist.{' '}
-                <Button variant="primary" className="w-fit">
-                    Join Waitlist
-                </Button>
+                <WaitlistModal>
+                    <Button variant="primary" className="w-fit">
+                        Join waitlist
+                    </Button>
+                </WaitlistModal>
             </div>
         ),
     },

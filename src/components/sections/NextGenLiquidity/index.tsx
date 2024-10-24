@@ -1,6 +1,6 @@
 import Button from '@/components/common/Button';
-import ComparisonTable from '../ConcentratedLiqSection/ComparisonTable';
-import ComparisonTableMobile from '../ConcentratedLiqSection/ComparisonTableMobile';
+import ComparisonTable from './ComparisonTable';
+import ComparisonTableMobile from './ComparisonTableMobile';
 
 export default function NextGenLiquidity() {
     return (

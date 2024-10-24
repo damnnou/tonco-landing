@@ -10,70 +10,67 @@ import { X } from 'lucide-react';
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = React.useState(false);
 
-    useEffect(() => {
-        gsap.fromTo(
-            'header',
-            { backgroundColor: 'rgba(255, 255, 255, 0)' },
-            {
-                backgroundColor: 'rgba(255, 255, 255,1)',
-                boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.3)',
-                scrollTrigger: {
-                    trigger: '#hero-section',
-                    start: 'top top',
-                    end: 'bottom',
-                    scrub: true,
-                },
-            }
-        );
-
-        // gsap.fromTo(
-        //     '#menu-button',
-        //     { color: 'black' },
-        //     {
-        //         color: 'black',
-        //         duration: 0.1,
-        //         scrollTrigger: {
-        //             trigger: '#hero-section',
-        //             start: 'bottom 80%',
-        //             end: 'bottom 80%',
-        //             scrub: true,
-        //         },
-        //     }
-        // );
-
-        // gsap.fromTo(
-        //     '#launch-button',
-        //     {
-        //         backgroundColor: '#10B68B',
-        //     },
-        //     {
-        //         color: 'white',
-        //         backgroundColor: '10B68B',
-        //         duration: 0.1,
-        //         scrollTrigger: {
-        //             trigger: '#hero-section',
-        //             start: 'bottom 80%',
-        //             end: 'bottom 80%',
-        //             scrub: true,
-        //         },
-        //     }
-        // );
-
-        // gsap.fromTo(
-        //     '#to-fill',
-        //     { fill: 'white' },
-        //     {
-        //         fill: 'rgb(56 118 162)',
-        //         duration: 0.1,
-        //         scrollTrigger: {
-        //             trigger: '#hero-section',
-        //             start: 'bottom 80%',
-        //             end: 'bottom 80%',
-        //             scrub: true,
-        //         },
-        //     }
-        // );
-    }, []);
+    // useEffect(() => {
+    // gsap.fromTo(
+    //     'header',
+    //     { backgroundColor: 'rgba(255, 255, 255, 1)' },
+    //     {
+    //         backgroundColor: 'rgba(255, 255, 255,1)',
+    //         boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.3)',
+    //         scrollTrigger: {
+    //             trigger: '#hero-section',
+    //             start: 'top top',
+    //             end: 'top 80%',
+    //             scrub: true,
+    //         },
+    //     }
+    // );
+    // gsap.fromTo(
+    //     '#menu-button',
+    //     { color: 'black' },
+    //     {
+    //         color: 'black',
+    //         duration: 0.1,
+    //         scrollTrigger: {
+    //             trigger: '#hero-section',
+    //             start: 'bottom 80%',
+    //             end: 'bottom 80%',
+    //             scrub: true,
+    //         },
+    //     }
+    // );
+    // gsap.fromTo(
+    //     '#launch-button',
+    //     {
+    //         backgroundColor: '#10B68B',
+    //     },
+    //     {
+    //         color: 'white',
+    //         backgroundColor: '10B68B',
+    //         duration: 0.1,
+    //         scrollTrigger: {
+    //             trigger: '#hero-section',
+    //             start: 'bottom 80%',
+    //             end: 'bottom 80%',
+    //             scrub: true,
+    //         },
+    //     }
+    // );
+    // gsap.fromTo(
+    //     '#to-fill',
+    //     { fill: 'white' },
+    //     {
+    //         fill: 'rgb(56 118 162)',
+    //         duration: 0.1,
+    //         scrollTrigger: {
+    //             trigger: '#hero-section',
+    //             start: 'bottom 80%',
+    //             end: 'bottom 80%',
+    //             scrub: true,
+    //         },
+    //     }
+    // );
+    // }, []);
 
     return (
         <header

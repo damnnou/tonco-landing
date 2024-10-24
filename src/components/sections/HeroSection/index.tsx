@@ -1,44 +1,14 @@
 import Button from '@/components/common/Button';
-import { Parallax } from 'react-scroll-parallax';
 import pea from '@/assets/hero-char.png';
+import WaitlistModal from '@/components/WaitlistModal';
 
 export default function HeroSection() {
     return (
         <section
             id="hero-section"
-            className="flex flex-col items-center justify-between w-full tall:h-screen h-[900px] max-md:pb-8 max-md:h-screen text-white"
+            className="flex flex-col items-center justify-between w-full h-screen md:min-h-[900px] max-md:pb-8 max-md:h-screen text-white"
         >
-            <div className="w-full tall:h-screen h-[900px] absolute -z-10 top-0 left-0 overflow-hidden max-md:h-screen max-md:max-h-screen">
-                {/* <img
-                    className="object-cover w-full h-full"
-                    alt="background-image"
-                    src={bg.src}
-                /> */}
-            </div>
-            <Parallax
-                className="absolute -z-10 left-0 top-0 max-md:w-[145px] max-md:top-[10%] overflow-hidden"
-                translateY={[-20, 20]}
-                speed={0}
-            >
-                {/* <img
-                    className="animate-left-in"
-                    alt="left-ton-coins"
-                    src={leftTonCoins.src}
-                /> */}
-            </Parallax>
-
-            <Parallax
-                className="absolute -z-10 right-0 top-0 max-md:w-[192px] overflow-hidden"
-                speed={0}
-            >
-                {/* <img
-                    className="animate-right-in"
-                    alt="right-ton-coins"
-                    src={rightTonCoins.src}
-                /> */}
-            </Parallax>
-
-            <div className="flex flex-col h-[400px] items-center gap-8 max-md:gap-6 tall:mt-[450px] max-md:my-auto max-md:h-[80px] mt-[400px] overflow-visible justify-between relative">
+            <div className="flex flex-col h-[400px] max-md:mt-72 items-center gap-8 max-md:gap-6 max-md:h-[80px] my-auto md:translate-y-40 overflow-visible justify-between relative">
                 <img
                     className="overflow-visible w-[250px] absolute -top-[300px] max-md:-top-[180px] animate-gravity-pea-fly-in max-md:w-[180px]"
                     alt="pea"
@@ -76,6 +46,7 @@ export default function HeroSection() {
                     className="flex gap-4 animate-fade"
                     style={{ animationDelay: '1.2s' }}
                 >
+                    <WaitlistModal />
                     <Button
                         disabled
                         // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
