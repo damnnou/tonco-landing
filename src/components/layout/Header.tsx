@@ -75,8 +75,10 @@ const Header: React.FC = () => {
     return (
         <header
             className={
-                'flex z-20 w-full h-fit animate-pea-fly-in opacity-0 animate-fill-forwards animate-duration-500 bg-white fixed transition-all duration-200 max-md:flex-col overflow-hidden' +
-                (menuOpen ? ' max-md:h-[290px] !bg-white ' : ' max-md:h-[74px]')
+                'flex z-20 w-full h-fit animate-pea-fly-in opacity-0 transition-none animate-fill-forwards animate-duration-500 bg-white dark:bg-dark-background fixed transition-all duration-200 max-md:flex-col overflow-hidden' +
+                (menuOpen
+                    ? ' max-md:h-[290px] !bg-white dark:!bg-dark-background'
+                    : ' max-md:h-[74px]')
             }
             style={{ animationDelay: '1.2s' }}
         >
@@ -139,7 +141,7 @@ const Header: React.FC = () => {
                         <XLogo />
                     </Button>
                     <Button
-                        className="hover:!translate-y-0"
+                        className="hover:!translate-y-0 "
                         // onClick={() => window.open("https://testnet.tonco.io", "_blank")}
                         id="launch-button"
                         variant="primary"
@@ -149,7 +151,7 @@ const Header: React.FC = () => {
                     </Button>
                 </nav>
             </div>
-            <nav className="flex flex-col p-5 pt-0 w-full gap-5 mx-auto text-black md:hidden">
+            <nav className="flex flex-col p-5 pt-0 w-full gap-5 mx-auto text-black dark:text-white md:hidden">
                 <ul className="flex flex-col gap-2 font-extraboldExt">
                     <li
                         className="cursor-pointer"
@@ -183,7 +185,7 @@ const Header: React.FC = () => {
                     >
                         More Info
                         <svg
-                            fill="black"
+                            className="fill-black dark:fill-white"
                             width="25"
                             height="24"
                             xmlns="http://www.w3.org/2000/svg"

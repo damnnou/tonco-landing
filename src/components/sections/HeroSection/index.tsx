@@ -36,7 +36,7 @@ export default function HeroSection() {
                 </h1>
                 <p
                     style={{ animationDelay: '1.2s' }}
-                    className="text-xl leading-7 text-center w-[700px] max-md:max-w-[358px] animate-fade delay-1000"
+                    className="text-xl leading-7 text-center w-[700px] max-md:max-w-[358px] animate-fade"
                 >
                     TONCO helps you maximize every trade, delivering capital
                     efficiency for both liquidity providers and traders

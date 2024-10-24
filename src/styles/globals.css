@@ -3,20 +3,24 @@
 @tailwind utilities;
 
 :root {
-    --background: #e8f5f1;
-    --primary: #10b68b;
+    --background: 'white'; /* Светлый фон */
+    --primary: #10b68b; /* Цвет для заголовков */
+    --foreground: #000000; /* Цвет текста по умолчанию */
+
+    --dark-background: #1a1a1a; /* Темный фон */
+    --dark-primary: #10b68b; /* Цвет для заголовков */
+    --dark-foreground: #ffffff; /* Цвет текста по умолчанию */
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #ffffff;
-        --foreground: #ededed;
-    }
+.dark {
+    --background: #1a1a1a;
+    --primary: #10b68b;
+    --foreground: #ffffff;
 }
 
 body {
     background: var(--background);
-    color: black;
+    color: var(--foreground);
 }
 
 h1,
@@ -32,7 +36,7 @@ h1 {
 }
 
 p {
-    color: black;
+    color: var(--foreground); /* Используйте переменную для текста */
 }
 
 @layer utilities {

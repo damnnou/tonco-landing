@@ -31,9 +31,9 @@ const WaitlistModal = ({
         React.cloneElement(children, { onClick: handleOpen } as any)
     ) : (
         <Button
-            onClick={handleOpen}
-            className="mx-auto border !bg-white !border-primary !text-primary"
             variant="action"
+            onClick={handleOpen}
+            className="mx-auto border !bg-white !border-primary !text-primary dark:!bg-[#1a1a1a] dark:!border-dark-primary dark:!text-dark-primary"
         >
             Join Waitlist
         </Button>

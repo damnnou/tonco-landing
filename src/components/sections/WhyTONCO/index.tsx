@@ -6,7 +6,7 @@ import peaFarmer from '@/assets/whytonco/pea-farmer.png';
 
 export default function WhyTONCO() {
     return (
-        <div className="flex flex-col items-center w-full bg-background px-4 p-8 md:p-[156px] md:py-[114px] relative rounded-3xl">
+        <div className="flex flex-col items-center w-full bg-background dark:bg-primary/5 px-4 p-8 md:p-[156px] md:py-[114px] relative rounded-3xl">
             <img
                 src={peaFarmer.src}
                 className="absolute w-fit bottom-0 right-24 max-md:right-0 z-0 max-md:w-36"
@@ -20,31 +20,31 @@ export default function WhyTONCO() {
                 </p>
             </div>
             <div className="flex flex-wrap gap-5 justify-center items-stretch mt-16 w-full max-md:mt-10 max-md:max-w-full">
-                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white rounded-3xl min-w-[240px] w-[290px]">
+                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white dark:bg-dark-background rounded-3xl min-w-[240px] w-[290px]">
                     <img className="w-fit mb-2" src={engineered.src} />
                     <h3 className="text-2xl font-semibold tracking-tighter leading-none">
                         Engineered for efficiency
                     </h3>
-                    <div className="mt-4 text-lg text-gray-800">
+                    <div className="mt-4 text-lg text-gray-800 dark:text-white">
                         Maximize returns by focusing liquidity where it’s needed
                         most
                     </div>
                 </div>
-                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white rounded-3xl min-w-[240px] w-[290px]">
+                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white dark:bg-dark-background rounded-3xl min-w-[240px] w-[290px]">
                     <img className="w-fit mb-2" src={access.src} />
                     <h3 className="text-2xl font-semibold tracking-tighter leading-none">
                         Access Deeper Liquidity
                     </h3>
-                    <div className="mt-4 text-lg text-gray-800">
+                    <div className="mt-4 text-lg text-gray-800 dark:text-white">
                         Trade with lower slippage, ensuring better swaps
                     </div>
                 </div>
-                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white rounded-3xl min-w-[240px] w-[290px]">
+                <div className="flex flex-col grow shrink px-6 pt-6 pb-16 bg-white dark:bg-dark-background rounded-3xl min-w-[240px] w-[290px]">
                     <img className="w-fit mb-2" src={builtfor.src} />
                     <h3 className="text-2xl font-semibold tracking-tighter leading-none">
                         Built for all Levels
                     </h3>
-                    <div className="mt-4 text-lg text-gray-800">
+                    <div className="mt-4 text-lg text-gray-800 dark:text-white">
                         Advanced tools for pros, with a user-friendly interface
                         for newcomers
                     </div>

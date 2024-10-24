@@ -109,7 +109,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
     return (
         <article
             onClick={() => !expanded && setExpanded(!expanded)}
-            className={`cursor-pointer flex flex-col gap-4 bg-[#E8F5F1] rounded-3xl max-md:px-5 p-5 transition-all duration-200 ${
+            className={`cursor-pointer flex flex-col gap-4 bg-[#E8F5F1] dark:bg-primary/5 rounded-3xl max-md:px-5 p-5 transition-all duration-200 ${
                 !expanded ? 'pb-1' : ''
             }`}
         >
@@ -147,7 +147,7 @@ const FAQItem: React.FC<FAQItemProps> = ({
 
 export default function FAQ() {
     return (
-        <div className="flex flex-col items-center w-full bg-white p-4 md:p-[156px] md:py-[114px]">
+        <div className="flex flex-col items-center w-full bg-white dark:bg-dark-background p-4 md:p-[156px] md:py-[114px]">
             <img
                 className="w-[210px] mb-8 max-md:w-[180px]"
                 src={peaHero.src}

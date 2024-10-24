@@ -71,7 +71,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
     };
 
     return (
-        <div className="max-w-[650px] animate-fade-up animate-duration-300 max-md:w-full  mx-auto max-md:p-6 p-8 gap-4 h-fit bg-white rounded-3xl shadow-lg">
+        <div className="max-w-[650px] animate-fade-up animate-duration-300 max-md:w-full  mx-auto max-md:p-6 p-8 gap-4 h-fit bg-white dark:bg-dark-background rounded-3xl shadow-lg">
             <form
                 onSubmit={handleSubmit}
                 id="mc-embedded-subscribe-form"
@@ -84,7 +84,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
                     </h2>
                     <X
                         onClick={close}
-                        className="text-gray-600 self-start hover:text-black cursor-pointer transition-all duration-200"
+                        className="text-gray-600 self-start hover:text-black dark:hover:text-white cursor-pointer transition-all duration-200"
                     />
                 </div>
 
@@ -103,7 +103,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
                     <input
                         type="email"
                         name="EMAIL"
-                        className={`w-full border rounded-xl p-3 ${
+                        className={`w-full border rounded-xl p-3 dark:bg-neutral-800 dark:border-neutral-600 ${
                             errors.email ? 'border-red-500' : 'border-gray-300'
                         }`}
                         id="mce-EMAIL"
@@ -111,7 +111,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-500 dark:text-gray-300">
                         Your email address
                     </span>
                     {errors.email && (
@@ -125,7 +125,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
                     <input
                         type="text"
                         name="WALLET"
-                        className={`w-full border rounded-xl p-3 ${
+                        className={`w-full border rounded-xl p-3 dark:bg-neutral-800 dark:border-neutral-600 ${
                             errors.wallet ? 'border-red-500' : 'border-gray-300'
                         }`}
                         id="mce-WALLET"
@@ -133,7 +133,7 @@ const MailchimpForm = ({ close }: { close: () => void }) => {
                         onChange={(e) => setWallet(e.target.value)}
                         required
                     />
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-500 dark:text-gray-300">
                         Your TON wallet address
                     </span>
                     {errors.wallet && (

@@ -5,6 +5,7 @@ module.exports = {
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             screens: {
@@ -16,6 +17,8 @@ module.exports = {
             colors: {
                 background: '#E8F5F1',
                 primary: '#10B68B',
+                'dark-background': '#1a1a1a', // Темный фон
+                'dark-primary': '#10b68b',
             },
             fontSize: {
                 '2xl': '22px',
