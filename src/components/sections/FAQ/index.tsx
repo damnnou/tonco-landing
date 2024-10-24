@@ -60,8 +60,10 @@ const faqData: FAQData[] = [
         question: 'Is the TONCO DEX live already?',
         answer: (
             <div className="flex flex-col gap-4">
-                The TONCO Testnet is launching soon. Get early access by joining
-                our waitlist.{' '}
+                <p>
+                    The TONCO Testnet is launching soon. Get early access by
+                    joining our waitlist.
+                </p>
                 <WaitlistModal>
                     <Button variant="primary" className="w-fit">
                         Join waitlist
@@ -72,7 +74,7 @@ const faqData: FAQData[] = [
     },
     {
         question: 'Does TONCO have a token?',
-        answer: 'No.',
+        answer: <p>No.</p>,
     },
     {
         question: 'Who is the TONCO team?',

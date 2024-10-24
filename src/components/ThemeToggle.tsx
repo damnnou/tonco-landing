@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
-import { Sun, Moon } from 'lucide-react'; // Импортируем иконки
+import React, { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 const ThemeToggle = () => {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(() => {
+        if (typeof window === 'undefined') return;
+        const savedTheme = window.localStorage.getItem('theme');
+        return savedTheme === 'dark';
+    });
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', isDark);
+        if (typeof window === 'undefined') return;
+
+        window.localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }, [isDark]);
 
     const toggleTheme = () => {
-        setIsDark(!isDark);
-        document.documentElement.classList.toggle('dark', !isDark);
+        setIsDark((prev) => !prev);
     };
 
     return (

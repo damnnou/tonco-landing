@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
         variant === 'primary'
             ? ' px-5 dark:!bg-dark-primary'
             : variant === 'action'
-            ? ' dark:!bg-dark-primary  text-xl min-h-[74px] text-[24px] max-md:min-h-[58px] md:h-[74px] max-md:text-[16px] px-8'
+            ? ' dark:bg-dark-primary text-xl min-h-[74px] text-[24px] max-md:min-h-[58px] md:h-[74px] max-md:text-[16px] px-8'
             : ' px-5 !bg-white dark:!bg-dark-background border border-primary !text-primary';
 
     return (
